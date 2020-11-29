@@ -6,5 +6,5 @@ row format delimited
 fields terminated by ','
 stored as textfile;
 
-LOAD DATA LOCAL INPATH '/var/tmp/hivesampledata/employee_data.csv' INTO TABLE emp_sampledb.temp_drivers;
+LOAD DATA LOCAL INPATH '/var/tmp/hivesampledata/employee_data.csv' INTO TABLE emp_sampledb.employee;
 
