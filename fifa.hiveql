@@ -1,0 +1,16 @@
+create database fifadb;
+use fifadb;
+CREATE TABLE `fifadb`.`fifa_19_players` (
+`sr_no` int ,
+`id` int ,  
+`name` string ,  
+`age` int,
+`nationality` string,
+`club` string,
+`preferred_foot` string,
+`position` string,
+`jersey_number` int,
+`joined` int)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TextFile;
+
+load data local inpath '/var/tmp/hivesampledata/fifa_19_players_data.csv' into table fifadb.fifa_19_players;
