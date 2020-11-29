@@ -1,0 +1,15 @@
+create database population;
+use population;
+
+CREATE TABLE `population`.`cities` (
+`rank` int,
+`name` string,
+`population_2011` string,
+`population_2001` string,
+`state` string )
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TextFile;
+load data local inpath '/var/tmp/hivesampledata/cities.csv' into table cities;
+
+create table population.cities_pop_2001 as select rank,name,population_2001,state from population.cities;
+create table population.cities_pop_2011 as select rank,name,population_2011,state from population.cities;
+
