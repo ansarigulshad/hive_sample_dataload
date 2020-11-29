@@ -11,3 +11,4 @@ wget -nv https://raw.githubusercontent.com/ansarigulshad/Datasets/master/driver_
 
 unzip /var/tmp/hivesampledata/driver_data.zip -d /var/tmp/hivesampledata/
 
+sh data_generator.sh
