@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-
-mkdir -p /var/tmp/hivesampledata
+if [ -d "/var/tmp/hivesampledata" ] 
+then
+    echo "Sampele Data Directory /var/tmp/hivesampledata exists." 
+else
+    mkdir -p /var/tmp/hivesampledata
+    echo "Created a Sampele Data Directory /var/tmp/hivesampledata." 
+fi
 
 wget -nv https://raw.githubusercontent.com/ansarigulshad/Datasets/master/fifa_19_players_data.csv -O /var/tmp/hivesampledata/fifa_19_players_data.csv
 wget -nv https://raw.githubusercontent.com/ansarigulshad/Datasets/master/cities.csv  -O /var/tmp/hivesampledata/cities.csv
