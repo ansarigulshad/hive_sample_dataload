@@ -1,0 +1,10 @@
+create database emp_sampledb;
+use emp_sampledb;
+
+create table emp_sampledb.employee(id int, name string, salary int, city string,mobile_no bigint) 
+row format delimited
+fields terminated by ','
+stored as textfile;
+
+LOAD DATA LOCAL INPATH '/var/tmp/hivesampledata/employee_data.csv' INTO TABLE emp_sampledb.temp_drivers;
+
