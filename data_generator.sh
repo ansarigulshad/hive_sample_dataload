@@ -2,7 +2,13 @@
 
 # script to generate 50k records, change the number_of_records to tweak the value 
 
-mkdir -p /var/tmp/hivesampledata
+if [ -d "/var/tmp/hivesampledata" ] 
+then
+    echo "Sampele Data Directory /var/tmp/hivesampledata exists." 
+else
+    mkdir -p /var/tmp/hivesampledata
+    echo "Created a Sampele Data Directory /var/tmp/hivesampledata." 
+fi
 
 sample_data_file=employee_data.csv
 number_of_records=50000
