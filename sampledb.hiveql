@@ -1,0 +1,19 @@
+create database sampledb;
+use sampledb;
+CREATE TABLE `sampledb`.`sample_07` (
+`code` string ,
+`description` string ,  
+`total_emp` int ,  
+`salary` int )
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TextFile;
+
+CREATE TABLE `sampledb`.`sample_08` (
+`code` string ,
+`description` string ,  
+`total_emp` int ,  
+`salary` int )
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TextFile;
+
+
+load data local inpath '/var/tmp/hivesampledata/sample_07.csv' into table sampledb.sample_07;
+load data local inpath '/var/tmp/hivesampledata/sample_08.csv' into table sampledb.sample_08;
