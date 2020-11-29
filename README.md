@@ -7,7 +7,7 @@ git clone https://github.com/ansarigulshad/hive_sample_dataload.git
 ```
 
 ```
-cd script_datagenerator
+cd /var/tmp/hive_sample_dataload
 chmod +x *.sh
 sh get_required_sample_files.sh
 ```
